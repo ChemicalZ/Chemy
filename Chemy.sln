@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chemy", "Chemy\Chemy.vcxproj", "{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}.Debug|x64.ActiveCfg = Debug|x64
+		{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}.Debug|x64.Build.0 = Debug|x64
+		{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}.Debug|x86.ActiveCfg = Debug|Win32
+		{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}.Debug|x86.Build.0 = Debug|Win32
+		{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}.Release|x64.ActiveCfg = Release|x64
+		{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}.Release|x64.Build.0 = Release|x64
+		{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}.Release|x86.ActiveCfg = Release|Win32
+		{2D7EB5F6-FCD4-4E17-9A89-B7D554458396}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB80E8BB-E1A1-4DFB-8D05-B1BDD7B0D131}
+	EndGlobalSection
+EndGlobal
