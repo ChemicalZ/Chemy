@@ -1,3 +1,6 @@
 [submodule "Chemy/Vendor/spdlog"]
 	path = Chemy/Vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Chemy/Vendor/SFML"]
+	path = Chemy/Vendor/SFML
+	url = https://github.com/SFML/SFML
