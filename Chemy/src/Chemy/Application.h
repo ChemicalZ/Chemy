@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Window.h"
 
 
 namespace Chemy {
@@ -11,6 +12,8 @@ namespace Chemy {
 		Application();
 		virtual ~Application();
 		void Run();
+	private:
+		std::unique_ptr<Window> _window;
 	};
 
 	//To be defined in the client

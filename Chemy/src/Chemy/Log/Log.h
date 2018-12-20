@@ -1,6 +1,5 @@
 #pragma once
 
-#include <memory>
 
 #include "Chemy\Core.h"
 #include "spdlog/spdlog.h"

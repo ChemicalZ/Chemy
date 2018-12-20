@@ -1,10 +1,14 @@
-#include "Application.h"
+#pragma once
 
+#include "czpch.h"
+
+#include "Application.h"
 
 namespace Chemy {
 
 	Application::Application()
 	{
+		_window = std::unique_ptr<Window>(Window::Create());
 	}
 
 
@@ -14,9 +18,6 @@ namespace Chemy {
 	
 	void Application::Run()
 	{
-		while (true)
-		{
-
-		}
+		_window->Update();
 	}
 }
