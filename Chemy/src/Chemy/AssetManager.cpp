@@ -1,13 +1,14 @@
 #pragma once
 #include "czpch.h"
 
-#include "ResourceManagers.h"
+#include "AssetManager.h"
 
 namespace Chemy {
 
 	sf::Texture AssetManager::LoadTexture(std::string name, std::string path) {
 		//Iterator to search database
 		auto it = _textures.find(name);
+
 		//Check to see if texture already exists
 		if (it == _textures.end()) {
 			sf::Texture temp;
@@ -30,9 +31,30 @@ namespace Chemy {
 			return it->second;
 		}
 	}
+
+	
+	//Load texture
+	sf::Texture AssetManager::LoadTexture(std::string name) {
+		//Iterator to search database
+		auto it = _textures.find(name);
+		//Check to see if texture already exists
+		if (it == _textures.end()) {
+			sf::Texture temp;
+			CZ_CORE_ERROR("Attempted to load unknown texture {}.", name);
+			return temp;
+		}
+		//Texture Exists
+
+		else {
+			//Return Texture
+			return it->second;
+		}
+	}
+	
 	sf::SoundBuffer AssetManager::LoadSound(std::string name, std::string path) {
 		//Iterator to search database
 		auto it = _sounds.find(name);
+
 		//Check to see if sound already exists
 		if (it == _sounds.end()) {
 			sf::SoundBuffer temp;
@@ -54,10 +76,30 @@ namespace Chemy {
 			return it->second;
 		}
 	}
+
+	sf::SoundBuffer AssetManager::Loadsound(std::string name){
+	//Iterator to search database
+		auto it = _sounds.find(name);
+
+		//Check to see if sound already exists
+		if (it == _sounds.end()) {
+			sf::SoundBuffer temp;
+			CZ_CORE_ERROR("Attempted to load unknown sound {}", name);
+			return temp;
+		}
+		//sound Exists
+
+		else {
+			//Return sound
+			return it->second;
+		}
+	}
+
 	//LoadFont(name,path)
 	sf::Font AssetManager::LoadFont(std::string name, std::string path) {
 		//Iterator to search database
 		auto it = _fonts.find(name);
+
 		//Check to see if font already exists
 		if (it == _fonts.end()) {
 			sf::Font temp;
@@ -76,6 +118,25 @@ namespace Chemy {
 
 		else {
 			//Return sound
+			return it->second;
+		}
+	}
+	//LoadFont(name)
+	sf::Font AssetManager::LoadFont(std::string name) {
+		//Iterator to search database
+		auto it = _fonts.find(name);
+
+		//Check to see if font already exists
+		if (it == _fonts.end()) {
+			sf::Font temp;
+			CZ_CORE_ERROR("Attempted to load unknown Font {}", name);
+			return temp;
+		}
+		//sound Exists
+
+		else {
+			//Return sound
+			CZ_CORE_INFO("{} Font requested", name);
 			return it->second;
 		}
 	}

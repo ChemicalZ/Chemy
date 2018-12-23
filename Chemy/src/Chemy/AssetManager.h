@@ -8,9 +8,12 @@ namespace Chemy {
 
 	class CHEMY_API AssetManager {
 	public:
-		sf::Texture LoadTexture(std::string, std::string);
-		sf::SoundBuffer LoadSound(std::string, std::string);
-		sf::Font LoadFont(std::string, std::string);
+		sf::Texture LoadTexture(std::string, std::string path);
+		sf::Texture LoadTexture(std::string);
+		sf::SoundBuffer LoadSound(std::string, std::string path);
+		sf::SoundBuffer Loadsound(std::string);
+		sf::Font LoadFont(std::string, std::string path);
+		sf::Font LoadFont(std::string);
 
 	private:
 		// Variable to store data

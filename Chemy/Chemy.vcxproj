@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="src\Chemy.h" />
     <ClInclude Include="src\Chemy\Application.h" />
+    <ClInclude Include="src\Chemy\AssetManager.h" />
     <ClInclude Include="src\Chemy\Core.h" />
     <ClInclude Include="src\Chemy\ECS\Component.h" />
     <ClInclude Include="src\Chemy\ECS\Entity.h" />
@@ -22,14 +23,13 @@
     <ClInclude Include="src\Chemy\EventSystem\EventSystem.h" />
     <ClInclude Include="src\Chemy\EventSystem\Listener.h" />
     <ClInclude Include="src\Chemy\Log\Log.h" />
-    <ClInclude Include="src\Chemy\ResourceManagers.h" />
     <ClInclude Include="src\Chemy\Window.h" />
     <ClInclude Include="src\czpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Chemy\Application.cpp" />
+    <ClCompile Include="src\Chemy\AssetManager.cpp" />
     <ClCompile Include="src\Chemy\Chemy.cpp" />
-    <ClCompile Include="src\Chemy\ResourceManagers.cpp" />
     <ClCompile Include="src\Chemy\Window.cpp" />
     <ClCompile Include="src\czpch.cpp" />
     <ClCompile Include="src\Chemy\ECS\Component.cpp" />
@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\SandBox\</OutDir>
     <IntDir>$(SolutionDir)bin-int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
