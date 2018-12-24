@@ -41,7 +41,7 @@ namespace Chemy {
 		//Go through the queue and call the OnEvent() of all associated in addressbook
 		void ProcessEvents();
 		//Add event to the end of the queue
-		void SendEvent(EVENT_TYPE, void*);
+		void SendEvent(Event);
 		//The systems response to certain events
 	};
 

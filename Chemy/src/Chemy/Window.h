@@ -23,17 +23,20 @@ namespace Chemy {
 		//Update loop
 		//TODO: replace with onEvent()
 		void Update();
+		//Draw Function
+		void Draw(const sf::Drawable&, int);
 		//return height
 		int GetHeight();
 		//return width
 		int GetWidth();
-
+		//Render the Screen
+		void Render();
 	private:
-
+		std::multimap<int, const sf::Drawable&> _drawqueue;
 		struct WindowData {
 			std::string _title;
 			int _width, _height;
-			std::unique_ptr<sf::Window> _window;
+			std::unique_ptr<sf::RenderWindow> _window;
 		};
 		WindowData _data;
 

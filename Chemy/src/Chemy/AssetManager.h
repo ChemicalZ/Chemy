@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Chemy\Core.h"
 #include "SFML/Graphics.hpp"
 #include "SFML/Audio.hpp"
 

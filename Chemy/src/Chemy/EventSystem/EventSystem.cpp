@@ -65,11 +65,9 @@ namespace Chemy {
 		}
 	}
 	//AddEventSystem:: event to the end of the queue
-	void EventSystem::SendEvent(EVENT_TYPE id, void* msg){
-		//create event
-		Event newEvent(id, msg);
+	void EventSystem::SendEvent(Event event){
 		//Add to queue
-		queue_.emplace_back(newEvent);
+		queue_.emplace_back(event);
 	}
 
 }
