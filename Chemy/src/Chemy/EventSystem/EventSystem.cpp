@@ -22,6 +22,7 @@ namespace Chemy {
 		}
 		//Not found so add to list
 		addressbook_.emplace(id, call_back);
+		CZ_CORE_INFO("New Listener registered to: {}", id);
 		return true;
 	}
 	//Remove specific Event_type OnEvent() from addressbook_
@@ -31,6 +32,7 @@ namespace Chemy {
 		for (auto it = range.first; it != range.second; ++it) {
 			if (it->second == call_back) {
 				addressbook_.erase(it);
+				CZ_CORE_INFO("Listener unregistered from: {}", id);
 				return true;
 			}
 
@@ -39,16 +41,15 @@ namespace Chemy {
 		return false;
 	}
 	//Remove OnEvent() from addressbook
-	bool EventSystem::UnregisterAll(Listener* call_back){
+	void EventSystem::UnregisterAll(Listener* call_back){
 		//Check to make sure the event is not already registered
 		for (std::multimap<EVENT_TYPE, Listener*>::iterator it = addressbook_.begin(); it != addressbook_.end(); ++it) {
 			if (it->second == call_back) {
 				addressbook_.erase(it);
-				return true;
 			}
 		}
+		CZ_CORE_INFO("All Listeners unregistered");
 		//The listener has no events
-		return false;
 	}
 		
 	//Go through the queue and call the OnEvent() of all associated in addressbook

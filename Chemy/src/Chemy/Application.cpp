@@ -18,7 +18,10 @@ namespace Chemy {
 		//Start the game
 		_isrunning = true;
 		CZ_CORE_INFO("Game Started");
+		EventSystem::Instance()->Register(EVENT_TYPE::SHUTDOWN, this);
 
+		//End Init
+		//Start the Game loop
 		this->Run();
 	}
 
@@ -30,6 +33,9 @@ namespace Chemy {
 	void Application::Update() {
 		//Get dt
 		float dt = clock.restart().asSeconds();
+		if (dt > (1 / MIN_FRAME_RATE)) {
+			dt = (1 / MIN_FRAME_RATE);
+		}
 		_lastfpsupdate += dt;
 		if (_showfps) {
 			//update FPS
@@ -55,6 +61,8 @@ namespace Chemy {
 	{
 		while (_isrunning) {
 			//get inputs
+			//Process events
+			EventSystem::Instance()->ProcessEvents();
 			//update Window
 			_window->Update();
 			//Update this application
@@ -65,4 +73,15 @@ namespace Chemy {
 
 		}
 	}
+
+	void Application::OnEvent(Event event) {
+		switch (event.EventID) {
+		case EVENT_TYPE::SHUTDOWN:
+			_isrunning = false;
+			break;
+		default:
+			break;
+		}
+	}
+
 }

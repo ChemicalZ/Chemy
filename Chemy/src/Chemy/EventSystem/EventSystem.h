@@ -36,7 +36,7 @@ namespace Chemy {
 		//Remove specific Event_type OnEvent() from addressbook_
 		bool Unregister(EVENT_TYPE, Listener*);
 		//Remove OnEvent() from addressbook
-		bool UnregisterAll(Listener*);
+		void UnregisterAll(Listener*);
 
 		//Go through the queue and call the OnEvent() of all associated in addressbook
 		void ProcessEvents();

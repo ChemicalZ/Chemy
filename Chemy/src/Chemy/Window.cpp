@@ -31,8 +31,10 @@ namespace Chemy {
 		while (_data._window->pollEvent(event))
 		{
 			// Request for closing the window
-			if (event.type == sf::Event::Closed)
+			if (event.type == sf::Event::Closed) {
+				EventSystem::Instance()->SendEvent(Event(EVENT_TYPE::SHUTDOWN, NULL));
 				_data._window->close();
+			}
 		}
 	}
 	//Adds items to the draw que
